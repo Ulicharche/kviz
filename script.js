@@ -142,7 +142,6 @@ const defaultWords = [
 { english: "timetable", macedonian: "распоред" },
 { english: "aerobics", macedonian: "аеробик" },
 { english: "volleyball", macedonian: "одбојка" },
-
 { english: "trendy", macedonian: "модерен" },
 { english: "thick", macedonian: "дебел" },
 { english: "expensive", macedonian: "скап" },
@@ -159,7 +158,6 @@ const defaultWords = [
 { english: "frosty", macedonian: "смрзнат" },
 { english: "freezing", macedonian: "многу студено" },
 { english: "sound", macedonian: "звук" },
-
 { english: "bottle", macedonian: "шише" },
 { english: "orange", macedonian: "портокал" },
 { english: "waterproof", macedonian: "водоотпорен" },
@@ -176,7 +174,6 @@ const defaultWords = [
 { english: "wonderful", macedonian: "прекрасен" },
 { english: "tropical", macedonian: "тропски" },
 { english: "alternative", macedonian: "алтернатива" },
-
 { english: "species", macedonian: "видови" },
 { english: "mountain", macedonian: "планина" },
 { english: "success", macedonian: "успех" },
