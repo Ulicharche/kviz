@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Words Learning - Учи Англиски</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SheetJS for Excel parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎓 Учи Англиски Зборови</h1>
+            <p class="subtitle">Слушни го зборот и го внеси на англиски</p>
+        </div>
+
+        <!-- FILE MANAGER SECTION -->
+        <div class="file-manager">
+            <div class="file-upload-section">
+                <label for="excelUpload" class="upload-label">
+                    📁 Превлечи Excel фајл или кликни да одбереш
+                </label>
+                <input 
+                    type="file" 
+                    id="excelUpload" 
+                    accept=".xlsx,.xls,.csv" 
+                    class="file-input"
+                >
+                <p class="file-help">Форматиране: Excel (.xlsx) или CSV - Колони: English | Macedonian</p>
+            </div>
+
+            <div class="word-list-section" id="wordListSection" style="display: none;">
+                <label for="wordListSelect">Избери листа за вежбање:</label>
+                <select id="wordListSelect">
+                    <option value="">-- Моја листа --</option>
+                </select>
+                <button id="clearFileBtn" class="btn btn-secondary small">🗑️ Обриши фајл</button>
+            </div>
+
+            <p class="current-list-info" id="currentListInfo">Користи ја вградена листа со 30 зборови</p>
+        </div>
+
+        <div class="stats-container">
+            <div class="stat">
+                <span class="stat-label">Вкупно</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">✅ Точни</span>
+                <span class="stat-value correct" id="correctCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">❌ Погрешни</span>
+                <span class="stat-value incorrect" id="incorrectCount">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Процент</span>
+                <span class="stat-value percent" id="percentCount">0%</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="word-display" id="wordDisplay">
+                <p class="word-instruction">Притисни Start за да почнеш</p>
+                <p class="translation" id="translation"></p>
+            </div>
+
+            <div class="answer-section">
+                <input 
+                    type="text" 
+                    id="answerInput" 
+                    placeholder="Внеси го англискиот збор..."
+                    autocomplete="off"
+                >
+                <div id="feedback" class="feedback"></div>
+            </div>
+
+            <div class="buttons-section">
+                <button id="startBtn" class="btn btn-primary">Start</button>
+                <button id="repeatBtn" class="btn btn-secondary" disabled>🔊 Repeat word</button>
+                <button id="checkBtn" class="btn btn-success" disabled>Check answer</button>
+                <button id="nextBtn" class="btn btn-info" disabled>Next word</button>
+                <button id="resetBtn" class="btn btn-danger">Reset score</button>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="progress-text" id="progressText"></p>
+        </div>
+
+        <div class="footer">
+            <p>💡 Совет: Притисни Enter за да проверити одговор</p>
+            <p style="font-size: 0.9em; margin-top: 10px; color: #666;">
+                Направено со ❤️ | Хостирано на GitHub Pages
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
